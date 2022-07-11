@@ -71,4 +71,12 @@ public class UserController {
 		return ResponseEntity.ok().body(user);
 		
 	}
+	
+	
+	@GetMapping("/message")
+	public String getMessage() {
+	
+		return "Hello testing controller";
+	
+	}
 }

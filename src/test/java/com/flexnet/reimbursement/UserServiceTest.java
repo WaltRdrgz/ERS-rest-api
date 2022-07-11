@@ -18,7 +18,6 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.flexnet.reimbursement.exception.ResourceExistsException;
 import com.flexnet.reimbursement.exception.ResourceNotFoundException;
 import com.flexnet.reimbursement.model.User;
 import com.flexnet.reimbursement.repository.UserRepository;
@@ -47,8 +46,7 @@ public class UserServiceTest {
 				+ "  \"password\": \"password123\", \r\n"
 				+ "  \"lastName\": \"lastname\", \r\n"
 				+ "  \"email\": \"myemail@email.com\", \r\n"
-				+ "  \"schema\": \"1.0\",\r\n"
-				+ "  \"role\" : \"user\"\r\n"
+				+ "  \"schema\": \"1.0\"\r\n"
 				+ "}";
 		
 		User user = objectMapper.readValue(json, User.class);
